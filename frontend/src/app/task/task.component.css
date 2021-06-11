@@ -1,0 +1,26 @@
+.property {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    float: left;
+    display: inline-flex;
+    margin: 5px;
+    border-radius: 50%;
+    border: 2px solid grey
+}
+
+.propertyMoreThan12 {
+    background-color: yellow;
+}
+
+.propertyLessThan12 {
+    background-color: orange;
+}
+
+.propertyPast {
+    background-color: red;
+}
+
+.propertyDone {
+    background-color: green;
+}

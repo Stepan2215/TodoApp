@@ -1,0 +1,45 @@
+﻿<Properties StartupConfiguration="{14FD03AF-C662-42ED-9FC8-DC8FDFECE209}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TodoApp/Data/ApiDbContext.cs">
+    <Files>
+      <File FileName="TodoApp/Configuration/JwtConfig.cs" Line="3" Column="2" />
+      <File FileName="TodoApp/Startup.cs" />
+      <File FileName="TodoApp/Data/ApiDbContext.cs" Line="17" Column="6" />
+      <File FileName="TodoApp/Program.cs" />
+      <File FileName="TodoApp/Controllers/TodoController.cs" />
+      <File FileName="TodoApp/appsettings.Development.json" />
+      <File FileName="TodoApp/appsettings.json" />
+      <File FileName="TodoApp/Models/Todo.cs" />
+      <File FileName="TodoApp/IdentityService/AuthenticationResult.cs" />
+      <File FileName="TodoApp/IdentityService/UserRegistrationRequestDto.cs" />
+      <File FileName="TodoApp/IdentityService/RegistrationResponse.cs" />
+      <File FileName="TodoApp/Controllers/AuthManagementController.cs" />
+      <File FileName="TodoApp/IdentityService/UserLoginRequest.cs" />
+      <File FileName="TodoApp/Migrations/20210610170610_Adding authentication to our Api.cs" />
+      <File FileName="TodoApp/Migrations/ApiDbContextModelSnapshot.cs" />
+      <File FileName="TodoApp/Properties/launchSettings.json" />
+      <File FileName="TodoApp/app.db" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TodoApp" expanded="True">
+            <Node name="TodoApp" expanded="True">
+              <Node name="Configuration" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True">
+                <Node name="ApiDbContext.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.TodoApp PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

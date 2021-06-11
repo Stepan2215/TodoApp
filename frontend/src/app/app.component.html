@@ -1,0 +1,94 @@
+
+<nav class="navbar avbar-dark bg-dark">
+  <a class="navbar-brand" href="#"></a>
+  <div class="right">
+    <form action="/action_page.php" style="float: right; position: relative; margin: 10px;">
+      <label for="cars">for </label>
+      <select name="emails" id="emails" (change)="loadAsignedTasks($event.target.value)">
+        <option value="temp@gmail.com">temp@gmail.com</option>
+        <option value="sert@gmail.com">sert@gmail.com</option>
+        <option value="alex@gmail.com">alex@gmail.com</option>
+        <option value="serega@gmail.com">serega@gmail.com</option>
+      </select>
+    </form>
+  </div>
+</nav>
+
+<div class="container-fluid ">
+  <div class="text-center">
+    <h1>TASK LIST</h1>
+    <br/>
+    <input
+      type="button"
+      class="btn btn-success btn-lg"
+      value="Create new Task"
+      (click)="addTask()"
+    />
+    <br/>
+    <br/>
+    <div *ngIf="editedTask" class="col-sm-4" >
+      <br>
+      <div class="form-group">
+        <input
+          placeholder="Name"
+          type="text"
+          maxlength="100"
+          [(ngModel)]="editedTask.name"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          placeholder="Description"
+          type="text"
+          maxlength="500"
+          [(ngModel)]="editedTask.description"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="number"
+          [(ngModel)]="editedTask.dueIn"
+          class="form-control"
+        />
+      </div>
+      <div class="btn-group">
+        <input
+          type="button"
+          value="Save"
+          (click)="saveTask()"
+          class="btn btn-primary"
+        />
+        <input
+          type="button"
+          value="Cancel"
+          (click)="cancel()"
+          class="btn btn-primary"
+        />
+      </div>
+      <br>
+      <br>
+    </div>
+  </div>
+  <table class="table table-striped table-dark">
+    <thead class="thead-dark">
+      <tr>
+        <td>Id</td>
+        <td>Status</td>
+        <td>Name</td>
+        <td>Description</td>
+        <td>Asigned</td>
+        <td>Due date</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let task of tasks"
+        app-task
+        [task]="task"
+        (onDelete)="onDelete($event)"
+      ></tr>
+    </tbody>
+  </table>
+</div>

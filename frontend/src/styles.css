@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.container-fluid {
+    background-color: rgb(78, 78, 80);
+}
+
+* {
+    background-color: rgb(78, 78, 80);
+    color: white;
+}
+
+.right {
+    position: relative;
+    float: left;
+}

@@ -1,0 +1,29 @@
+<td>{{task.id}}</td>
+<td><div *ngIf="taskDetails">
+    <span *ngFor="let property of getProperties()">
+        <span class="property propertyMoreThan12" *ngIf="property == 'moreThan12'" title="A task that has more than 12h remaining and is not completed"></span>
+        <span class="property propertyLessThan12" *ngIf="property == 'lessThan12'" title="A task that is not completed and has less than 12h to be completed"></span>
+        <span class="property propertyPast" *ngIf="property == 'past'" title="A task that is past its due date"></span>
+        <span class="property propertyDone" *ngIf="property == 'done'" title="A completed task"></span>
+    </span>
+</div></td>
+<td>  {{taskDetails && taskDetails.description}}</td>
+<td>{{task.name}}</td>
+<td>
+    <div class="right">
+        <form action="/action_page.php" style="float: right; position: relative; margin: 10px;">
+          <label for="cars">Asign to:</label>
+          <select name="emails" id="emails" (change)="asignTaskTo($event.target.value)">
+            <option value={{task.email}} selected disabled hidden>{{task.email}}</option>
+            <option value="temp@gmail.com">temp@gmail.com</option>
+            <option value="sert@gmail.com">sert@gmail.com</option>
+            <option value="alex@gmail.com">alex@gmail.com</option>
+            <option value="serega@gmail.com">serega@gmail.com</option>
+          </select>
+        </form>
+      </div>
+</td>
+<td>{{taskDetails && taskDetails.dueDate  | date:'medium'}} <br/>
+    <input *ngIf="taskDetails && !taskDetails.isDone && !isPastDueDate()" type="button" value="Complete" class="btn btn-success" (click)="completeTask()" /> 
+    <input *ngIf="taskDetails && !taskDetails.isDone && !isPastDueDate()" type="button" value="Delete" (click)="deleteTask()" class="btn btn-danger" /> 
+</td>
